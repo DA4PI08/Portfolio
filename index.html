@@ -210,7 +210,7 @@ background-color: #ffffff; /* white */
     align-items: center;
     justify-content: space-evenly;
     background: rgba(8, 100, 62, 0.2);
-    border-radius: 40px;
+    border-radius: 30px;
     margin-bottom: 40px;
 }
 
@@ -237,9 +237,10 @@ background-color: #ffffff; /* white */
 
 .home_body{
     width: auto;
+	margin-top: 20px;
     height: auto;
     display: grid;
-    grid-template-rows: 87vh;
+    grid-template-rows: 100vh;
     grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
 }
@@ -364,6 +365,25 @@ button{
     .name {
         font-size: 30px; /* Adjust the font size for smaller screens */
     }
+	
+	hhome{
+		grid-template-columns: 1fr; /* Adjust the grid layout for smaller screens */
+		grid-template-rows: auto; /* Adjust the grid layout for smaller screens */
+	}
+	
+	.home_body {
+                grid-template-columns: 1fr; /* Adjust grid layout for smaller screens */
+                text-align: center; /* Center align content */
+    }
+
+    .imgdiv img {
+        width: 200px; /* Adjust image size for smaller screens */
+        height: 200px;
+    }
+
+    .name {
+           font-size: 24px; /* Adjust font size for smaller screens */
+    }
 
     .aboutus {
         grid-template-columns: 1fr; /* Adjust the grid layout for smaller screens */
@@ -391,7 +411,11 @@ button{
         font-size: 16px; /* Adjust the font size for smaller screens */
     }
 }
+.navbar{
+	height: 80px;
 
+}
+        
 </style>
 </head>
 
@@ -425,11 +449,9 @@ button{
 	
 	
 	 <div class="hhome active " id="home">
-	 <div class="container">
-	
         <div class="home_body">
             <div class="imgdiv">
-                <img src="assets/img/circle.png" width="400px" height="400px">
+                <img src="assets/img/circle.png">
             </div>
             <div class="name">
                 <p>Namaste World</p>
@@ -437,9 +459,9 @@ button{
                 <p>Java Developer</p>
             </div>
         </div>
-	</div>.
-	
     </div>
+
+
 	
 	
     <section class="page-section portfolio" id="portfolio">
@@ -520,7 +542,7 @@ button{
 			
 			<div class="aboutus">
            
-			 <div class="hoverimage">
+			<div class="hoverimage">
                 <div class="image">
                     <img src="assets/img/circle.png" width="350px" height="350px">
                     
