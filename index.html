@@ -236,7 +236,7 @@ background-color: #ffffff; /* white */
 }
 
 .home_body{
-    width: 99%;
+    width: auto;
     height: auto;
     display: grid;
     grid-template-rows: 87vh;
@@ -349,6 +349,48 @@ button{
     .image .tree{
         height: 96px;
     }
+	
+@media only screen and (max-width: 768px) {
+    /* Adjust the styles for smaller screens */
+    .home_body {
+        grid-template-rows: auto; /* Adjust the grid layout for smaller screens */
+    }
+
+    .imgdiv img {
+        width: 250px; /* Adjust the image size for smaller screens */
+        height: 250px;
+    }
+
+    .name {
+        font-size: 30px; /* Adjust the font size for smaller screens */
+    }
+
+    .aboutus {
+        grid-template-columns: 1fr; /* Adjust the grid layout for smaller screens */
+        font-size: 20px; /* Adjust the font size for smaller screens */
+    }
+
+    .about {
+        margin-top: 20px; /* Adjust the margin for smaller screens */
+    }
+
+    .image img {
+        width: 250px; /* Adjust the image size for smaller screens */
+        height: 250px;
+    }
+
+    .skills {
+        font-size: 20px; /* Adjust the font size for smaller screens */
+    }
+
+    .skills-items {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    }
+
+    .timeline-content {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    }
+}
 
 </style>
 </head>
@@ -383,9 +425,11 @@ button{
 	
 	
 	 <div class="hhome active " id="home">
+	 <div class="container">
+	
         <div class="home_body">
             <div class="imgdiv">
-                <img src="assets/img/circle.png" width="500px" height="500px">
+                <img src="assets/img/circle.png" width="400px" height="400px">
             </div>
             <div class="name">
                 <p>Namaste World</p>
@@ -393,6 +437,8 @@ button{
                 <p>Java Developer</p>
             </div>
         </div>
+	</div>.
+	
     </div>
 	
 	
@@ -463,10 +509,13 @@ button{
 	
 	
 <!-- About Section Heading-->
-<section class="page-section" id="">	
+<section class="page-section" id="">
+
+	
             <div class="text-center">
                 <h2 class="page-section-heading d-inline-block text-Black">ABOUT</h2>
             </div>
+
 		<div class="hhomeabout about_us " id="about">
 			
 			<div class="aboutus">
@@ -474,22 +523,10 @@ button{
 			 <div class="hoverimage">
                 <div class="image">
                     <img src="assets/img/circle.png" width="350px" height="350px">
-                    <div class="tree">
-                        <div class="icon">
-                            <a href=""><i class="fa fa-facebook-official"
-                                    aria-hidden="true"></i></a>
-                            <a href=""><i class="fa fa-instagram"
-                                    aria-hidden="true"></i></a>
-                            <a href=""><i class="fa fa-twitter-square"
-                                    aria-hidden="true"></i></a>
-                            <a href=""><i class="fa fa-linkedin-square"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 			   <div class="about">
-
                 
 				<div class="text-center">
 					<p class="pre-wrap lead">Dedicated and result-oriented software engineer with approximately 3
@@ -535,6 +572,7 @@ button{
             </div>
 			</div>
 			</div>
+			
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
@@ -542,7 +580,7 @@ button{
                 <div class="divider-custom-line"></div>
             </div>
             <!-- About Section Content-->
-           
+
    </section>    
 	
 <section class="page-section bg-primary text-white mb-0" id="about">
