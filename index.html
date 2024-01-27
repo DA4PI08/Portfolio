@@ -101,8 +101,9 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
-    .button {
-background-color: #ffffff; /* white */
+
+.button {
+  background-color: #ffffff; /* white */
   border: none;
   color: white;
   text-align: center;
@@ -126,14 +127,12 @@ background-color: #ffffff; /* white */
 }
 
 .about{
-        margin-top: 4%;
-       
+        margin-top: 4%; 
  }
  .aboutus{
         display: inline-table;
         align-items: center;
-        justify-content: center;
-       
+        justify-content: center;      
 }
 .skills{
     padding: 15px 20px;
@@ -158,13 +157,11 @@ background-color: #ffffff; /* white */
     border-radius: 20px;
     margin-top: 10px;
     background-color: wheat;
-
 }
 
 .timeline-content{
     padding: 20px;
     font-weight: 600;
-   
 }
 .timeline-content .date{
     color: rgb(19, 11, 24);
@@ -197,12 +194,10 @@ background-color: #ffffff; /* white */
 }
 
 .edu-content .timeline::before{
-    height: 360px;
+    height: 500px;
    }
    
-   
 .hhome{
-   
     width: 100%;
     height: auto;
     margin:auto;
@@ -215,7 +210,6 @@ background-color: #ffffff; /* white */
 }
 
 .hhomeabout{
-   
     width: 100%;
     height: auto;
     margin:auto;
@@ -223,8 +217,7 @@ background-color: #ffffff; /* white */
     align-items: center;
     justify-content: space-evenly;
     background: rgba(2, 120, 62, 0.2);
-    border-radius: 20px;
-    
+    border-radius: 20px; 
 }
 
 .hhomeabout.active{
@@ -262,7 +255,6 @@ background-color: #ffffff; /* white */
     display: grid;
     font-size: 40px;
 }
-
 
 button{
     font-size: 25px;
@@ -347,9 +339,13 @@ button{
         margin-top: 7px;
         font-size: 35px;
     }
-    .image .tree{
-        height: 96px;
-    }
+.image .tree{
+    height: 96px;
+}
+	
+.navbar{
+	height: 80px;
+}
 	
 @media only screen and (max-width: 768px) {
     /* Adjust the styles for smaller screens */
@@ -364,9 +360,9 @@ button{
 	}
 	
 	.home_body {
-                grid-template-columns: 1fr; /* Adjust grid layout for smaller screens */
-                text-align: center; /* Center align content */
-				grid-template-rows: auto; /* Adjust the grid layout for smaller screens */			
+        grid-template-columns: 1fr; /* Adjust grid layout for smaller screens */
+        text-align: center; /* Center align content */
+		grid-template-rows: auto; /* Adjust the grid layout for smaller screens */			
     }
 
     .imgdiv img {
@@ -374,7 +370,11 @@ button{
         height: 210px;
 		margin-top: 70px;
     }
-
+	
+	.image img {
+        width: 250px; /* Adjust the image size for smaller screens */
+        height: 250px;
+    }
     .aboutus {
         grid-template-columns: 1fr; /* Adjust the grid layout for smaller screens */
         font-size: 20px; /* Adjust the font size for smaller screens */
@@ -382,11 +382,6 @@ button{
 
     .about {
         margin-top: 10px; /* Adjust the margin for smaller screens */
-    }
-
-    .image img {
-        width: 250px; /* Adjust the image size for smaller screens */
-        height: 250px;
     }
 
     .skills {
@@ -400,9 +395,6 @@ button{
     .timeline-content {
         font-size: 16px; /* Adjust the font size for smaller screens */
     }
-}
-.navbar{
-	height: 80px;
 }
         
 </style>
@@ -443,16 +435,14 @@ button{
                 <img src="assets/img/circle.png">
             </div>
             <div class="name">
-                <p>Namaste World</p>
-				<h2><a title="Resume" href="https://drive.google.com/file/d/1g5FPlLm_cRxwUajgbj6bDPrfNkp69nEu/view?usp=sharing" style="" target="_blank">Divyansh Agrawal</a></h2>
+                <p>Namaste World!</p>
+				<h2><a title="Resume" href="https://drive.google.com/file/d/1FXIu7ZY3gW0GpbWek4DPTbL4M3aeYiIN/view?usp=sharing" 
+				style="" target="_blank">Divyansh Agrawal</a></h2>
                 <p>Java Developer</p>
             </div>
         </div>
     </div>
 
-
-	
-	
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
@@ -486,10 +476,10 @@ button{
                 
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="card h-100">
-                        <a target="_blank" href=""><img class="card-img-top" src="./assets/img/preview.png" alt="" ></a>
+                        <a target="_blank" href="https://github.com/DA4PI08/Portfolio"><img class="card-img-top" src="./assets/img/preview.png" alt="" ></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a target="_blank" href="">My Portfolio</a>
+                                <a target="_blank" href="https://github.com/DA4PI08/Portfolio">My Portfolio</a>
                             </h4>
                             <p class="card-text">
                                 <span class="badge badge-primary">JavaScript</span>
@@ -572,8 +562,13 @@ button{
                             <h5>Indore | M.P | India</h5>
                         </div>
                         <div class="timeline-content">
-                            <span class="date">2014-2016</span>
-                            <h3>Shri Guru Tegh Bahadur Academy</h3>
+                            <span class="date">2016</span>
+                            <h3>HSC-Shri Guru Tegh Bahadur Academy</h3>
+                            <h5>Ratlam | M.P| India</h5>
+                        </div>
+						<div class="timeline-content">
+                            <span class="date">2014</span>
+                            <h3>SSC-Shri Guru Tegh Bahadur Academy</h3>
                             <h5>Ratlam | M.P| India</h5>
                         </div>
                     </div>
@@ -589,7 +584,6 @@ button{
                 <div class="divider-custom-line"></div>
             </div>
             <!-- About Section Content-->
-
 </section>    
 	
 <section class="page-section text-black mb-0" style="background: rgba(2, 120, 62, 0.2);" id="about">
@@ -610,17 +604,16 @@ button{
            
 		   <p style="text-align:left" class="lead">
 			Technology Stack:
-				Java, Spring BOOT, MongoDB, GIT, Kafka.</br>
-			1)Vendor Management System Enhancement:
-				Actively contributing to the enhancement of the Vendor Management System, a pivotal component of AJIO's digital commerce infrastructure.</br>
-			2)Multi-Tenant System Implementation:
-					Implemented and maintained a scalable Multi-Tenant system, optimizing resources to accommodate diverse user needs effectively.</br>
-			3)Event-Driven Architecture Development:
-				Spearheaded the development of an event-driven system architecture, facilitating seamless communication and coordination among microservices within AJIO's ecosystem.</br>
-			4)End-to-End API Flows Development:
-					Developed comprehensive end-to-end API flows to address various business requirements, ensuring smooth integration and optimal functionality across AJIO's digital commerce systems.</br>
+				Java, Spring BOOT, MongoDB, GIT, Kafka.</br></br>
+			1)<b>Vendor Management System Enhancement:</b>
+				Actively contributing to the enhancement of the Vendor Management System, a pivotal component of AJIO's digital commerce infrastructure.</br></br>
+			2)<b>Multi-Tenant System Implementation:</b>
+					Implemented and maintained a scalable Multi-Tenant system, optimizing resources to accommodate diverse user needs effectively.</br></br>
+			3)<b>Event-Driven Architecture Development:</b>
+				Spearheaded the development of an event-driven system architecture, facilitating seamless communication and coordination among microservices within AJIO's ecosystem.</br></br>
+			4)<b>End-to-End API Flows Development:</b>
+					Developed comprehensive end-to-end API flows to address various business requirements, ensuring smooth integration and optimal functionality across AJIO's digital commerce systems.</br></br>
             </p>
-			
 			</br>
 			
             <p style="text-align:center ;"class="pre-wrap lead "><b>SOFTWARE ENGINEER</b></p>
@@ -630,19 +623,19 @@ button{
            
 		   <p style="text-align:left" class="lead">
 			Technology Stack:
-				Java, Spring MVC, REST API, OracleDb, SVN, JSP/JSTL, AJAX, PL/SQL.</br>
-			1)End-to-End Affiliate Flow:
-				Designed and implemented a seamless flow enabling affiliates to promote diverse brands across different countries. Resulted in heightened brand visibility and increased affiliate engagement.</br> 
-			2)Dynamic Deals:
-				Engineered a system for creating dynamic deals, allowing affiliates to earn commissions based on their players' active activities.</br>
-			3)Promotions Automation via Microservices:
-				Spearheaded the implementation of promotions and offers automation through microservices. Streamlined processes and bolstered the efficiency of promotional campaigns.</br> 
-			4)Migration from Struts to Spring:
-				Played a pivotal role in migrating a Struts project to the Spring framework. Ensured a smooth transition, harnessing the advantages of the Spring ecosystem.</br> 
-			5)Statistical Reporting System:
-				Developed a robust statistical reporting system capable of extracting data from multiple tables. Facilitated data-driven decision-making by offering insights into key metrics and performance indicators.</br>
-			6)CSM API Development:
-				Developed a RESTful API (CSM API) for the internal team to facilitate the sharing of specific data.</br>     
+				Java, Spring MVC, REST API, OracleDb, SVN, JSP/JSTL, AJAX, PL/SQL.</br></br>
+			1)<b>End-to-End Affiliate Flow:</b>
+				Designed and implemented a seamless flow enabling affiliates to promote diverse brands across different countries. Resulted in heightened brand visibility and increased affiliate engagement.</br></br> 
+			2)<b>Dynamic Deals:</b>
+				Engineered a system for creating dynamic deals, allowing affiliates to earn commissions based on their players' active activities.</br></br>
+			3)<b>Promotions Automation via Microservices:</b>
+				Spearheaded the implementation of promotions and offers automation through microservices. Streamlined processes and bolstered the efficiency of promotional campaigns.</br></br> 
+			4)<b>Migration from Struts to Spring:</b>
+				Played a pivotal role in migrating a Struts project to the Spring framework. Ensured a smooth transition, harnessing the advantages of the Spring ecosystem.</br></br> 
+			5)<b>Statistical Reporting System:</b>
+				Developed a robust statistical reporting system capable of extracting data from multiple tables. Facilitated data-driven decision-making by offering insights into key metrics and performance indicators.</br></br>
+			6)<b>CSM API Development:</b>
+				Developed a RESTful API (CSM API) for the internal team to facilitate the sharing of specific data.</br>
 			</p>
          </div>         
 </section>
@@ -701,10 +694,13 @@ button{
 				3)MTA: Database Administration Fundamentals<a href="https://www.credly.com/badges/0c18fa37-31b1-4f9d-8c0b-ac9ae0df3521/public_url" class="link"  target="_blank"> 
 				<i class="fa fa-plane" aria-hidden="true"></i></a> 
 			</p>
-
-			<button class="button" >
-				<!--<a href="" target="_blank ">More...</a>-->
-			</button>
+			<p class="pre-wrap lead">
+				4)Coursera: Programming Foundations with JavaScript, HTML and CSS<a href="https://coursera.org/share/ac69a29e0a77f016cb3226141a49bb7f" class="link"  target="_blank"> 
+				<i class="fa fa-plane" aria-hidden="true"></i></a> 
+			</p>
+			<!--<button class="button" >
+				<a href="" target="_blank ">More...</a>
+			</button>-->
         </div>
     </div>
 </section>
