@@ -4,967 +4,583 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to my portfolio website!">
+    <meta name="description" content="Divyansh Agrawal - Senior Java Developer & Software Engineer with 5 years of experience specializing in backend development, microservices, and system design.">
     <meta name="author" content="Divyansh Agrawal">
+    <meta name="keywords" content="Java Developer, Software Engineer, Backend Development, Spring Boot, Microservices, System Design">
 	
-    <meta property="og:url"                content="" />
-    <meta property="og:type"               content="website" />
-    <meta property="og:title"              content="Portfolio - Divyansh Agrawal" />
-    <meta property="og:description"        content="Welcome to my portfolio!" />
-    <meta property="og:image"              content="./assets/img/preview.png" />
-    <title>Divyansh Agrawal</title>
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Divyansh Agrawal - Senior Java Developer" />
+    <meta property="og:description" content="Senior Java Developer with 5 years of experience in backend development and microservices architecture." />
+    <meta property="og:image" content="./assets/img/preview.png" />
+    
+    <title>Divyansh Agrawal - Senior Java Developer</title>
+    
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="./assets/img/favicons/site.webmanifest">
-    <link rel="mask-icon" href="./assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="./assets/img/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="./assets/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Font Awesome icons (free version)-->
-   
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet">
-    <!-- Fonts CSS-->
-    <link rel="stylesheet" href="css/heading.css">
-    <link rel="stylesheet" href="css/body.css">
-	
-<style>    
-    * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-.button {
-  background-color: #ffffff; /* white */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 15px;
-  font-size: 16px;}
-.link:link {
-  background-color: white;
-}
-
-.link:hover {
-  background-color: lightgreen;
-}
-
-.link:active {
-  background-color: hotpink;
-} 
-    b {
-  font-weight: bold;
-}
-
-.about{
-        margin-top: 4%; 
- }
- .aboutus{
-        display: inline-table;
-        align-items: center;
-        justify-content: center;      
-}
-.skills{
-    padding: 15px 20px;
-    font-size: 28px;
-    margin-left: -20px;
-    font-family: 'Slabo 27px', serif;
-    font-weight: 700;
+    <meta name="theme-color" content="#334155">
     
-}
-
-.skills.colo{
-    color: black;
-}
-
-.skills-items{
-    padding: 5px 15px;
-    font-size: 20px;
-    display: inline-flex;
-    background: rgba(255,255,255,.1);
-    color: rgb(4, 65, 7);
-    font-size: 20px;
-    border-radius: 20px;
-    margin-top: 10px;
-    background-color: wheat;
-}
-
-.timeline-content{
-    padding: 20px;
-    font-weight: 600;
-}
-.timeline-content .date{
-    color: rgb(19, 11, 24);
-}
-.timeline-content .date{
-    padding-top: 20px;
-}
-.edu-content .timeline-content::before{
-    content: '';
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    position: absolute;
-    background: rgb(236, 235, 236);
-    z-index: -2;
-    margin-left: -24px;
-    margin-top: 5px;
-}
-.edu-content{
-    margin-left: 20px;
-}
-.edu-content .timeline::before{
-    content: '';
-    height: 250px;
-    width: 2px;
-    position: absolute;
-    background: rgb(83, 36, 60);
-    z-index: -2;
-    object-fit: contain;
-}
-
-.edu-content .timeline::before{
-    height: 500px;
-   }
-   
-.hhome{
-    width: 100%;
-    height: auto;
-    margin:auto;
-    position: relative;
-    align-items: center;
-    justify-content: space-evenly;
-    background: rgba(8, 100, 62, 0.2);
-    border-radius: 30px;
-    margin-bottom: 40px;
-}
-
-.hhomeabout{
-    width: 100%;
-    height: auto;
-    margin:auto;
-    position: relative;
-    align-items: center;
-    justify-content: space-evenly;
-    background: rgba(2, 120, 62, 0.2);
-    border-radius: 20px; 
-}
-
-.hhomeabout.active{
-    display: block;
-}
-
-.hhome.active{
-    display: block;
-}
-
-.home_body{
-    width: auto;
-	margin-top: 20px;
-    height: auto;
-    display: grid;
-    grid-template-rows: 100vh;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-evenly;
-}
-.imgdiv {
-   display: grid;
-   justify-items: center;
-   align-content: center;
- }
-.imgdiv img{
-    width: 350px;
-    height: 350px;
-    border: 4px solid white;
-    border-radius: 205px;
-    margin-top: 20px;
-}
-.name{
-    justify-content: center;
-    align-content: center;
-    display: grid;
-    font-size: 40px;
-}
-
-button{
-    font-size: 25px;
-    font-weight: 700;
-    border: none;
-    margin-top: 10px;
-    background: transparent;
-    color: Black;
-    border-bottom: 2px solid black;
-   
-}
-
-.aboutus{
-    height: auto;
-    width: 100%;
-   font-size: 40px;
-   color: white;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-.hoverimage{
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    height: auto;
-    border-radius: 20px;
-}
-.about{
-    display: grid;
-    margin: 20px;
-  font-size: 20px;
-   margin-top: 80px;
-} 
-
-.image img{
-   box-sizing: border-box;
-   border-radius: 10px ;
-}
-.image{
-    height: 355px;
-    box-sizing: border-box;
-    display: grid;
-    position: relative;
-}
-.image .tree {
-    background: rgba(124, 62, 62, 0.2);
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    z-index: 3;
-    top: 69%;
-   padding: 30px 20px;
-   transform: translateZ(100px) scaleY(0);
-   transform-origin: top;
-   transition: 0.5s;
-   border-bottom-left-radius: 14px;
-   border-bottom-right-radius: 14px;
-   transform-style: preserve-3d;
-}
-.tree .icon{
-    align-items: center;
-    justify-content: center;
-    margin-left: 22%;
-    margin-top: 10px;
-}
-.tree .icon a:hover{
-    color: #ffff00;
-}
-.image:hover .tree{
-    transform: translateZ(100px) scaleY(1);
-}
-.icon a{
-    color: white;
-    margin: 2px;
-}
- .tree .icon{
-        align-items: center;
-        justify-content: center;
-        margin-left: 12%;
-        margin-top: 7px;
-        font-size: 35px;
-    }
-.image .tree{
-    height: 96px;
-}
-	
-.navbar{
-	height: 80px;
-}
-	
-@media only screen and (max-width: 768px) {
-    /* Adjust the styles for smaller screens */
-
-    .name {
-        font-size: 30px; /* Adjust the font size for smaller screens */
-    }
-	
-	hhome{
-		grid-template-columns: 1fr; /* Adjust the grid layout for smaller screens */
-		grid-template-rows: auto; /* Adjust the grid layout for smaller screens */
-	}
-	
-	.home_body {
-        grid-template-columns: 1fr; /* Adjust grid layout for smaller screens */
-        text-align: center; /* Center align content */
-		grid-template-rows: auto; /* Adjust the grid layout for smaller screens */			
-    }
-
-    .imgdiv img {
-        width: 210px; /* Adjust image size for smaller screens */
-        height: 210px;
-		margin-top: 70px;
-    }
-	
-	.image img {
-        width: 250px; /* Adjust the image size for smaller screens */
-        height: 250px;
-    }
-    .aboutus {
-        grid-template-columns: 1fr; /* Adjust the grid layout for smaller screens */
-        font-size: 20px; /* Adjust the font size for smaller screens */
-    }
-
-    .about {
-        margin-top: 10px; /* Adjust the margin for smaller screens */
-    }
-
-    .skills {
-        font-size: 20px; /* Adjust the font size for smaller screens */
-    }
-
-    .skills-items {
-        font-size: 16px; /* Adjust the font size for smaller screens */
-    }
-
-    .timeline-content {
-        font-size: 16px; /* Adjust the font size for smaller screens */
-    }
-}
-        
-</style>
+    <!-- Font Awesome icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/modern-styles.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Divyansh Agrawal</a>
-            <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded"
-                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Divyansh Agrawal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#portfolio">PROJECTS</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#about">ABOUT</a>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
                     </li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#achivements">ACHIEVEMENTS</a>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
                     </li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#extra">EXTRACURRICULAR</a>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#achievements">Achievements</a>
                     </li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#contact">CONTACT</a>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-	
-	
-	 <div class="hhome active " id="home">
-        <div class="home_body">
-            <div class="imgdiv">
-                <img src="assets/img/circle2.jpeg">
-            </div>
-            <div class="name">
-                <p>Namaste World!</p>
-				<h2><a title="Resume" href="https://drive.google.com/file/d/1CI6S5C2ZeNjzpahEzskT1DCVz5qYLmhV/view?usp=sharing" 
-				style="" target="_blank">Divyansh Agrawal</a></h2>
-                <p>Java Developer</p>
-            </div>
-        </div>
-    </div>
 
-    <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <!-- Portfolio Section Heading-->
-            <div class="text-center">
-                <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PROJECTS</h2>
-            </div>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-code"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- Portfolio Grid Items-->
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <a target="_blank" href=""><img class="card-img-top" src=""  alt="" ></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a target="_blank" >Bequest</a>
-                            </h4>
-                            <p class="card-text">
-                                <span class="badge badge-primary">Android</span>
-                                <span class="badge badge-warning">JAVA</span>
-                                <span class="badge badge-primary">XML</span>
-                                </br></br>Donation App
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <a target="_blank" href="https://github.com/DA4PI08/Portfolio"><img class="card-img-top" src="./assets/img/bg.png" alt="" ></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a target="_blank" href="https://github.com/DA4PI08/Portfolio">My Portfolio</a>
-                            </h4>
-                            <p class="card-text">
-                                <span class="badge badge-primary">JavaScript</span>
-                                <span class="badge badge-warning">HTML/CSS</span>
-                                </br></br>My Portfolio.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <a target="_blank" href=""><img class="card-img-top" src="" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a target="_blank" href="">Spring REST And Microservice</a>
-                            </h4>
-                            <p class="card-text">
-                                <span class="badge badge-primary">Spring</span>
-                                <span class="badge badge-warning">Rest</span>
-                                </br></br>Spring REST And Microservice
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- </section>
-	
-	
-<!-- About Section Heading-->
-<section class="page-section" id="">
-            <div class="text-center">
-                <h2 class="page-section-heading d-inline-block text-Black">ABOUT</h2>
-            </div>
-
-		<div class="hhomeabout about_us " id="about">
-			
-			<div class="aboutus">
-           
-			<div class="hoverimage">
-                <div class="image">
-                    <img src="assets/img/circle.png" width="350px" height="350px">
-                    
-                </div>
-            </div>
-			   <div class="about">
-                
-				<div class="text-center ">
-					<p class="pre-wrap lead" style="color: black;">Experienced Java backend Software Engineer with over 3.5+ years 
-					of hands-on development, delivering 12+ Java-based projects on time. Enhanced system performance by 30% and collaborated 
-					effectively within teams of 8 developers in agile settings.</p>
-                </div>
-				
-                <div class="skills colo">
-                    <p> Skills</p>
-                    <div class="skills-items">JAVA (J2EE)</div>
-                    <div class="skills-items">SPRING/BOOT/MVC</div>
-					<div class="skills-items">OOPS</div>
-                    <div class="skills-items">ORACLE DB</div>
-					<div class="skills-items">PL/SQL</div>
-					<div class="skills-items">DATA STRUCTURE</div>
-                    <div class="skills-items">Mongodb/kafka</div>
-					<div class="skills-items">AJAX</div>
-					<div class="skills-items">JSTL/JSPs</div>
-					<div class="skills-items">REST API/Microservices</div>
-					<div class="skills-items">C/C++</div>
-                    <div class="skills-items">HTML/CSS</div>
-					<div class="skills-items">GIT/SVN</div>
-					<div class="skills-items">System Design</div>
-					<div class="skills-items">Design patterns</div>
-
-                </div>
-                <div class="edu-button">
-                    <button type="button" class="education" data-target="#">Education</button>
-                </div>
-                <div class="edu-content">
-                    <div class="timeline">
-                        <div class="timeline-content">
-                            <span class="date">2016-2020</span>
-                            <h3>Bachelor of Engineering-<span>Acropolis Institute of Technology & Research</span></h3>
-							<h5>Computer Science and Engineering</h5>
-                            <h5>Indore | M.P | India</h5>
-                        </div>
-                        <div class="timeline-content">
-                            <span class="date">2016</span>
-                            <h3>HSC-Shri Guru Tegh Bahadur Academy</h3>
-                            <h5>Ratlam | M.P| India</h5>
-                        </div>
-						<div class="timeline-content">
-                            <span class="date">2014</span>
-                            <h3>SSC-Shri Guru Tegh Bahadur Academy</h3>
-                            <h5>Ratlam | M.P| India</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			</div>
-			</div>
-			
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-random"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- About Section Content-->
-</section>    
-	
-<section class="page-section text-black mb-0" style="background: rgba(2, 120, 62, 0.2);" id="about">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="page-section-heading d-inline-block text-white">EXPERIENCE</h2>
-            </div>
-                <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-random"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-			 <p style="text-align:center ;"class="pre-wrap lead "><b>SDE-1</b></p>
-                <p style="text-align:center ;" class="pre-wrap lead"><b>AJIO</b></p>
-                <p style="text-align:center ;" class="pre-wrap lead"><b>Deccember-2022 - Present, Bengaluru , Karnataka, India </b></p>
-                <p style="text-align:center ;" class="pre-wrap lead"><b>Project Name : - Seller Central(AJIO B2B Engineering)</b></p>
-           
-		   <p style="text-align:left" class="lead">
-			Technology Stack:
-				Java, Spring-Boot, MongoDB, GIT, Kafka, Rest API, Node.js, Typescript, Docker</br></br>
-			1)<b>Multi-Tenant System Implementation:</b>
-				Designed a scalable Multi-Tenant system with Java, Spring Boot, Apache Kafka for messaging, and MongoDB, ensuring efficient data management and performance adaptability</br></br>
-			2)<b>Vendor Management System Enhancement:</b>
-				Actively contribute to AJIO's Vendor Management System, boosting operational efficiency and Optimization for over 30,000 vendors.</br></br>
-			3)<b>Event-Driven Architecture Development:</b>
-				Contributed to designing and implementing an Event-driven architecture using Object-Oriented approach, improving system latency by 40% and enhancing Microservice integration.</br></br>
-			4)<b>End-to-End API Flows Development:</b>
-				Developed comprehensive API workflows for AJIO, ensuring seamless integration and adherence to best practices for over 30,000 sellers.</br></br>
-			5)<b>Complex Workflows:</b>	
-				Addressed and resolved complex seller workflow challenges, boosting team efficiency by 25% with creative problem-solving strategies.</br></br>
-            </p>
-			</br>
-			
-            <p style="text-align:center ;"class="pre-wrap lead "><b>SOFTWARE ENGINEER</b></p>
-                <p style="text-align:center ;" class="pre-wrap lead"><b>IVY Software Devlopment Service(Entain Group)</b></p>
-                <p style="text-align:center ;" class="pre-wrap lead"><b>January-2021 - December-2022, Hyderabad , Telangana, India </b></p>
-                <p style="text-align:center ;" class="pre-wrap lead"><b>Project Name : - Affiliates(Entain Product)</b></p>
-           
-		   <p style="text-align:left" class="lead">
-			Technology Stack:
-				Java, Spring MVC, REST API, Oracle-Database, SVN, JSP/JSTL, AJAX, PL/SQL.</br></br>
-			1)<b>End-to-End Affiliate Flow:</b>
-				Designed and implemented a seamless flow enabling affiliates to promote diverse brands across different countries. Resulted in heightened brand visibility and increased affiliate engagement.</br></br> 
-			2)<b>Dynamic Deals:</b>
-				Engineered a system for creating dynamic deals, allowing affiliates to earn commissions based on their players' active activities.</br></br>
-			3)<b>Promotions Automation via Microservices:</b>
-				Spearheaded the implementation of promotions and offers automation through microservices. Streamlined processes and bolstered the efficiency of promotional campaigns.</br></br> 
-			4)<b>Migration from Struts to Spring:</b>
-				Played a pivotal role in migrating a Struts project to the Spring framework. Ensured a smooth transition, harnessing the advantages of the Spring ecosystem.</br></br> 
-			5)<b>Statistical Reporting System:</b>
-				Developed a robust statistical reporting system capable of extracting data from multiple tables. Facilitated data-driven decision-making by offering insights into key metrics and performance indicators.</br></br>
-			6)<b>CSM API Development:</b>
-				Developed a RESTful API (CSM API) for the internal team to facilitate the sharing of specific data.</br>
-			</p>
-         </div>         
-</section>
-		 
-
-<section class="page-section" id="achivements">
-    <div class="container">
-            <!-- Contact Section Heading-->
-            <div class="text-center">
-                <h2 class="page-section-heading text-secondary d-inline-block mb-0">ACHIEVEMENT</h2>
-            </div>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-anchor"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-
-            <!-- About Section Content-->
-            <div >
-				<p class="pre-wrap lead">
-					1) Awarded with Shri Sojatia Scholarship for 90% attendance in year (2016-2017).
-				</p>	
-				<p class="pre-wrap lead">
-					2) Awarded certificate in National Standard Examination in Physics (NSEP) for being in top 10% (2016).
-				</p>
-				<p class="pre-wrap lead">
-					3) Silver Level Problem-Solving Badge and Gold Level JAVA Badge from HackerRank.
-				</p>
-				<p class="pre-wrap lead">
-					4) Entain champions award for top performer in the project.
-				</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="page-section text-black mb-0" style="background: rgba(2, 120, 62, 0.2);"  id="certificates">
-    <div class="container">
-            <!-- About Section Heading-->
-            <div class="text-center">
-                <h2 class="page-section-heading d-inline-block text-white">CERTIFICATES</h2>
-            </div>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-window-maximize"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- About Section Content-->
-        <div class="text-center">
-			<p class="pre-wrap lead">
-				1)HackerRank Intermediate Java Programmer<a href="https://www.hackerrank.com/certificates/bf3b558cbe51" class="link"  target="_blank"> 
-				<i class="fa fa-plane" aria-hidden="true"></i></a>
-			</p>
-			<p class="pre-wrap lead">
-				2)Coursera Programming Fundamentals<a href="https://coursera.org/share/f6a84cec194196b9c1d420cab8d64a1e" class="link"  target="_blank"> 
-				<i class="fa fa-plane" aria-hidden="true"></i></a>
-			</p>
-			<p class="pre-wrap lead">
-				3)MTA: Database Administration Fundamentals<a href="https://www.credly.com/badges/0c18fa37-31b1-4f9d-8c0b-ac9ae0df3521/public_url" class="link"  target="_blank"> 
-				<i class="fa fa-plane" aria-hidden="true"></i></a> 
-			</p>
-			<p class="pre-wrap lead">
-				4)Coursera: Programming Foundations with JavaScript, HTML and CSS<a href="https://coursera.org/share/ac69a29e0a77f016cb3226141a49bb7f" class="link"  target="_blank"> 
-				<i class="fa fa-plane" aria-hidden="true"></i></a> 
-			</p>
-			<!--<button class="button" >
-				<a href="" target="_blank ">More...</a>
-			</button>-->
-        </div>
-    </div>
-</section>
-    
-<section class="page-section" id="extra">
-    <div class="container">
-            <!-- Contact Section Heading-->
-            <div class="text-center">
-                <h2 class="page-section-heading text-secondary d-inline-block mb-0">Extracurricular Activities</h2>
-            </div>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fa fa-cubes " aria-hidden="true"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-			<p class="pre-wrap lead">
-				1) Participated in Acrothon (A Run for Social Cause) in Association with academy of Indore Marathoners.(2019).
-			</p>
-			<p class="pre-wrap lead">
-				2)Participated in quiz on Health and Wellness from Ministry of Health and Family welfare (2019).
-			</p>
-			<p class="pre-wrap lead">
-				3)Participated in National Entrepreneurship Network (NEN) workshop (2017).
-			</p>
-			<p class="pre-wrap lead">
-				4)Participated in Ethical Hacking Workshop(2017).
-			</p>
-	</div>
-</section>
-      
-	  
-<section class="page-section text-black mb-0" style="background: rgba(2, 120, 62, 0.2);" id="morelinks">
-        <div class="container">
-            <!-- About Section Heading-->
-            <div class="text-center">
-                <h2 class="page-section-heading d-inline-block text-white">More Links</h2>
-            </div>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fa fa-users" ></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- About Section Content-->
-		<div class="text-center">
-			<p class="pre-wrap ">
-				1) LeetCode  <a href="https://leetcode.com/Divyansh4pi08" class="link" target="_blank"> <i class="fa fa-plane" aria-hidden="true"></i></a>
-			</p>
-			<p class="pre-wrap ">
-				2) Codechef <a href="https://www.codechef.com/users/da532" class="link"  target="_blank"> <i class="fa fa-plane" aria-hidden="true"></i></a> 
-			</p>
-			<p class="pre-wrap ">
-				3) HackerRank <a href="https://www.hackerrank.com/Divyansh_4pi08" class="link"  target="_blank"> <i class="fa fa-plane" aria-hidden="true"></i></a>
-			</p>
-			<p class="pre-wrap ">
-				4) Hackerearth <a href="https://www.hackerearth.com/@divyansh55" class="link" target="_blank"><i class="fa fa-plane" aria-hidden="true"></i></a>
-			</p>
-		</div>
-	</div>
-</section>
-	
-	<!--Contact-->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <!-- Contact Section Heading-->
-            <div class="text-center">
-                <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
-            </div>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-phone"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- Contact Section Content-->
-            <div class="row justify-content-center">
-                <div class="col-lg-4">
-                    <div class="d-flex flex-column align-items-center">
-                        <a href="tel:+91-9406815130"><div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div></a>
-                        <div class="text-muted">Phone</div>
-                        <div class="lead font-weight-bold"><a href="tel:+91-9406815130">+91-9406815130</a></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="d-flex flex-column align-items-center">
-                        <a href="mailto:divyanshagrawal532@gmail.com"><div class="icon-contact mb-3"><i class="far fa-envelope"></i></div></a>
-                        <div class="text-muted">Email</div><a class="lead font-weight-bold"
-                            href="mailto:divyanshagrawal532@gmail.com">divyanshagrawal532@gmail.com</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-       
-<section class=" bg-primary text-white mb-0" id="morelinks">
-<h2></h2>
-
-<!--
-<div class="slideshow-container">
-
-
-<div class="mySlides fade">
-  <div class="numbertext">1 </div>
-  <img src="sage1.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 </div>
-  <img src="sage2.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-
-<div class="mySlides fade">
-  <div class="numbertext"> 3 </div>
-  <img src="sage4.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext"> 4 </div>
-  <img src="sage5.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext"> 5 </div>
-  <img src="sage6.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
-<br>
-
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span>
-  <span class="dot"></span>  
-</div>
--->
-</section>
-<!--<script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides()
-    {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) 
-      {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) 
-      {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-</script>-->
-   
-    <footer class="footer text-center">
-        <div class="container">
-            <div class="row">
-                <!-- Footer Location-->
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="mb-4"></h4>
-                    <p class="pre-wrap lead mb-0"> </p>
-                </div>
-                <!-- Footer Social Icons-->
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="mb-4">AROUND THE WEB</h4>
-                    <a target="_blank" href="https://www.linkedin.com/in/divyanshagrawal4pi08/">
-                        <span class="fa-stack fa-lg">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting">Hello, I'm</div>
+                <h1 class="hero-name">Divyansh Agrawal</h1>
+                <div class="hero-title">Senior Java Developer</div>
+                <p class="hero-description">
+                    Passionate backend developer with 5 years of experience crafting scalable microservices 
+                    and robust Java applications. Specialized in Spring ecosystem, system design, and delivering 
+                    high-performance solutions for enterprise environments.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://drive.google.com/file/d/1CI6S5C2ZeNjzpahEzskT1DCVz5qYLmhV/view?usp=sharing" 
+                       class="btn-primary-custom" target="_blank">
+                        <i class="fas fa-download"></i>
+                        Download Resume
                     </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/divyanshagrawal130/">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-					<li class="list-inline-item">
-                        <a target="blank" href="https://www.instagram.com/divyansh4pi08">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="blank" href="https://github.com/DA4PI08">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="blank" href="https://twitter.com/Divyansh_Agrwal">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
                 </div>
-                <!-- Footer About Text-->
-                <div class="col-lg-4">
-                    <h4 class="mb-4"></h4>
-                    <p class="pre-wrap lead mb-0"> </p>
+            </div>
+            <div class="hero-image-container">
+                <img src="assets/img/circle2.jpeg" alt="Divyansh Agrawal" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container-custom">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">
+                    Dedicated to building innovative solutions that drive business success
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image-container">
+                    <img src="assets/img/circle.png" alt="Divyansh Agrawal" class="about-image">
+                </div>
+                
+                <div class="about-details">
+                    <p class="about-text">
+                        I'm a results-driven Senior Java Developer with 5 years of experience in backend development 
+                        and system architecture. My expertise lies in designing and implementing scalable microservices, 
+                        optimizing system performance, and delivering robust enterprise solutions.
+                    </p>
+                    
+                    <p class="about-text">
+                        At AJIO, I've contributed to large-scale vendor management systems serving 30,000+ vendors, 
+                        implementing event-driven architectures that improved system latency by 40%. My passion for 
+                        clean code and innovative problem-solving drives me to continuously learn and adopt emerging technologies.
+                    </p>
+                    
+                    <div class="skills-section">
+                        <h3 class="skills-title">Technical Expertise</h3>
+                        <div class="skills-grid" id="skillsGrid">
+                            <div class="skill-item skill-expert" data-skill="Java">Java (J2EE)</div>
+                            <div class="skill-item skill-expert" data-skill="Spring Boot">Spring Boot</div>
+                            <div class="skill-item skill-expert" data-skill="Spring MVC">Spring MVC</div>
+                            <div class="skill-item skill-expert" data-skill="Microservices">Microservices</div>
+                            <div class="skill-item skill-expert" data-skill="REST APIs">REST APIs</div>
+                            <div class="skill-item skill-advanced" data-skill="MongoDB">MongoDB</div>
+                            <div class="skill-item skill-advanced" data-skill="Oracle DB">Oracle DB</div>
+                            <div class="skill-item skill-advanced" data-skill="Apache Kafka">Apache Kafka</div>
+                            <div class="skill-item skill-intermediate" data-skill="Docker">Docker</div>
+                            <div class="skill-item skill-expert" data-skill="System Design">System Design</div>
+                            <div class="skill-item skill-expert" data-skill="Design Patterns">Design Patterns</div>
+                            <div class="skill-item skill-intermediate" data-skill="Node.js">Node.js</div>
+                            <div class="skill-item skill-intermediate" data-skill="TypeScript">TypeScript</div>
+                            <div class="skill-item skill-advanced" data-skill="PL/SQL">PL/SQL</div>
+                            <div class="skill-item skill-advanced" data-skill="Git/SVN">Git/SVN</div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-section">
+                        <h3 class="skills-title">Education</h3>
+                        <div class="education-item">
+                            <h4>Bachelor of Engineering - Computer Science and Engineering</h4>
+                            <p>Acropolis Institute of Technology and Research</p>
+                            <p class="text-muted">August 2016 - September 2020 | Indore, Madhya Pradesh</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Higher Secondary Certificate (HSC) - PCM</h4>
+                            <p>Shri Guru Tegh Bahadur Academy</p>
+                            <p class="text-muted">April 2015 - March 2016 | Ratlam, Madhya Pradesh</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
-
-    </footer>
-    <!-- Copyright Section-->
-    <section class="copyright py-4 text-center text-white">
-        <div class="container"><small class="pre-wrap"> | Developed By  Divyansh Agrawal | 2024 </a></small></div>
- 
-
     </section>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-    <div class="scroll-to-top d-lg-none position-fixed"><a
-            class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
-                class="fa fa-chevron-up"></i></a></div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Core theme JS-->
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container-custom">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">
+                    Building enterprise-grade solutions and driving technical excellence
+                </p>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Software Development Engineer - 1</h3>
+                            <div class="experience-company">AJIO (Reliance Retail)</div>
+                            <div class="experience-date">December 2022 - Present | Bengaluru, Karnataka</div>
+                        </div>
+                        <p class="experience-description">
+                            <strong>Project:</strong> Seller Central (AJIO B2B Engineering Platform)
+                        </p>
+                        <p class="experience-description">
+                            <strong>Tech Stack:</strong> Java, Spring Boot, MongoDB, Apache Kafka, REST APIs, Node.js, TypeScript, Docker
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Architected and implemented a scalable <strong>Multi-Tenant System</strong> using Java, Spring Boot, and Apache Kafka, serving 30,000+ vendors with optimized data management and performance adaptability</li>
+                            <li>Enhanced <strong>Vendor Management System</strong> operations, boosting efficiency and optimization across AJIO's extensive vendor network</li>
+                            <li>Developed <strong>Event-Driven Architecture</strong> with Object-Oriented principles, achieving 40% improvement in system latency and seamless microservice integration</li>
+                            <li>Built comprehensive <strong>End-to-End API Workflows</strong> ensuring seamless integration and adherence to best practices for enterprise-scale operations</li>
+                            <li>Resolved complex seller workflow challenges, increasing team efficiency by 25% through innovative problem-solving and optimization strategies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Software Engineer</h3>
+                            <div class="experience-company">IVY Software Development Services (Entain Group)</div>
+                            <div class="experience-date">January 2021 - December 2022 | Hyderabad, Telangana</div>
+                        </div>
+                        <p class="experience-description">
+                            <strong>Project:</strong> Affiliates Platform (Entain Product Suite)
+                        </p>
+                        <p class="experience-description">
+                            <strong>Tech Stack:</strong> Java, Spring MVC, REST APIs, Oracle Database, SVN, JSP/JSTL, AJAX, PL/SQL
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Designed and implemented <strong>End-to-End Affiliate Management Flow</strong> enabling multi-brand promotion across international markets, significantly increasing brand visibility and affiliate engagement</li>
+                            <li>Engineered <strong>Dynamic Commission System</strong> allowing flexible deal creation and real-time commission calculation based on player activities</li>
+                            <li>Led <strong>Microservices Implementation</strong> for promotions and offers automation, streamlining campaign management and improving operational efficiency</li>
+                            <li>Spearheaded <strong>Legacy System Migration</strong> from Struts to Spring Framework, modernizing the technology stack and improving maintainability</li>
+                            <li>Developed comprehensive <strong>Statistical Reporting System</strong> with multi-table data extraction capabilities, enabling data-driven decision making through advanced analytics</li>
+                            <li>Built <strong>RESTful CSM API</strong> for internal data sharing, facilitating seamless cross-team collaboration and data accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Java Developer (Intern)</h3>
+                            <div class="experience-company">PEOPLE ASSETS LEARNING SERVICES</div>
+                            <div class="experience-date">January 2019 - February 2019 | Work From Home</div>
+                        </div>
+                        <p class="experience-description">
+                            <strong>Tech Stack:</strong> Java, Apache POI, Excel Processing, Data Manipulation
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Leveraged <strong>Apache POI</strong> to manipulate and process Excel data in Java, implementing advanced data handling functionalities for efficient document processing</li>
+                            <li>Applied Java development skills to create software solutions that enhanced operational efficiency and reliability</li>
+                            <li>Contributed to system performance improvements of <strong>15%</strong> through optimized data processing algorithms and efficient coding practices</li>
+                            <li>Gained hands-on experience in <strong>enterprise-level Java development</strong> and data manipulation techniques in a professional environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container-custom">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Showcasing innovative solutions and technical expertise
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img class="project-image" src="./assets/img/proj_1.png" alt="Bequest Donation Platform">
+                    <div class="project-content">
+                        <h3 class="project-title">Bequest - Donation Platform</h3>
+                        <p class="project-description">
+                            A comprehensive Android application designed to streamline charitable donations and 
+                            connect donors with verified charitable organizations. Features secure payment processing 
+                            and real-time donation tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">XML</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img class="project-image" src="./assets/img/bg.png" alt="Professional Portfolio">
+                    <div class="project-content">
+                        <h3 class="project-title">Professional Portfolio Website</h3>
+                        <p class="project-description">
+                            A modern, responsive portfolio website showcasing professional experience and projects. 
+                            Built with clean design principles and optimized for performance across all devices.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DA4PI08/Portfolio" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img class="project-image" src="./assets/img/proj_3.png" alt="Spring Microservices">
+                    <div class="project-content">
+                        <h3 class="project-title">Spring REST & Microservices</h3>
+                        <p class="project-description">
+                            Enterprise-grade microservices architecture implementation using Spring Boot and Spring Cloud. 
+                            Features service discovery, API gateway, distributed configuration, and monitoring.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Spring Cloud</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kafka</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section section-alt" id="achievements">
+        <div class="container-custom">
+            <div class="section-header">
+                <h2 class="section-title">Achievements & Recognition</h2>
+                <p class="section-subtitle">
+                    Milestones in my professional and academic journey
+                </p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <h4><i class="fas fa-award text-primary me-2"></i>Entain Champions Award</h4>
+                        <p>Recognized as top performer in the project for exceptional contribution to system architecture and performance optimization.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <h4><i class="fas fa-code text-primary me-2"></i>HackerRank Certifications</h4>
+                        <p>Silver Level Problem-Solving Badge and Gold Level Java Badge demonstrating strong algorithmic and programming skills.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <h4><i class="fas fa-medal text-primary me-2"></i>Academic Excellence</h4>
+                        <p>Awarded Shri Sojatia Scholarship for maintaining 90% attendance and academic performance (2016-2017).</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <h4><i class="fas fa-certificate text-primary me-2"></i>NSEP Recognition</h4>
+                        <p>Achieved top 10% ranking in National Standard Examination in Physics (NSEP) 2016, demonstrating analytical excellence.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <h3>Professional Certifications</h3>
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <a href="https://www.hackerrank.com/certificates/bf3b558cbe51" target="_blank" class="certification-link">
+                            <i class="fas fa-external-link-alt me-2"></i>
+                            HackerRank Intermediate Java Programmer
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a href="https://coursera.org/share/f6a84cec194196b9c1d420cab8d64a1e" target="_blank" class="certification-link">
+                            <i class="fas fa-external-link-alt me-2"></i>
+                            Coursera Programming Fundamentals
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a href="https://www.credly.com/badges/0c18fa37-31b1-4f9d-8c0b-ac9ae0df3521/public_url" target="_blank" class="certification-link">
+                            <i class="fas fa-external-link-alt me-2"></i>
+                            MTA: Database Administration Fundamentals
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a href="https://coursera.org/share/ac69a29e0a77f016cb3226141a49bb7f" target="_blank" class="certification-link">
+                            <i class="fas fa-external-link-alt me-2"></i>
+                            Programming Foundations with JavaScript, HTML & CSS
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container-custom">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">
+                    Ready to collaborate on innovative projects or discuss opportunities
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:divyanshagrawal532@gmail.com" class="contact-value">divyanshagrawal532@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+                
+                <div class="coding-profiles">
+                    <h4 class="text-center mb-4">Coding Profiles</h4>
+                    <div class="profile-links">
+                        <a href="https://leetcode.com/Divyansh4pi08" target="_blank" class="profile-link">
+                            <i class="fas fa-code"></i>
+                            LeetCode
+                        </a>
+                        <a href="https://www.codechef.com/users/da532" target="_blank" class="profile-link">
+                            <i class="fas fa-trophy"></i>
+                            CodeChef
+                        </a>
+                        <a href="https://www.hackerrank.com/Divyansh_4pi08" target="_blank" class="profile-link">
+                            <i class="fas fa-star"></i>
+                            HackerRank
+                        </a>
+                        <a href="https://www.hackerearth.com/@divyansh55" target="_blank" class="profile-link">
+                            <i class="fas fa-medal"></i>
+                            HackerEarth
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/divyanshagrawal4pi08/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/DA4PI08" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/divyansh4pi08" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/divyansh4pi08" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/divyansh4pi08/" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Divyansh Agrawal. All rights reserved. | Crafted with passion for innovation</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
-    <!-- GitHub buttons -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <style>
+    .achievement-card {
+        background: var(--bg-primary);
+        padding: var(--space-lg);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+    
+    .achievement-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .achievement-card h4 {
+        color: var(--text-primary);
+        margin-bottom: var(--space-md);
+        font-size: 1.125rem;
+    }
+    
+    .achievement-card p {
+        color: var(--text-secondary);
+        margin-bottom: 0;
+        line-height: 1.6;
+    }
+    
+    .certification-link {
+        display: inline-block;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: var(--space-sm) var(--space-md);
+        border: 1px solid var(--primary-color);
+        border-radius: var(--border-radius-md);
+        transition: all 0.3s ease;
+    }
+    
+    .certification-link:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+    }
+    
+    .profile-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+    }
+    
+    .profile-link {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: var(--space-md);
+        background-color: var(--bg-accent);
+        border-radius: var(--border-radius-lg);
+        color: var(--text-primary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .profile-link:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+    }
+    
+    .education-item {
+        margin-top: var(--space-lg);
+    }
+    
+    .education-item h4 {
+        color: var(--text-primary);
+        font-size: 1.125rem;
+        margin-bottom: var(--space-xs);
+    }
+    
+    .education-item p {
+        margin-bottom: var(--space-xs);
+    }
+    
+    @media (max-width: 768px) {
+        .profile-links {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
 </body>
 
 </html>
