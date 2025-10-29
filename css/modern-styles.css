@@ -516,18 +516,16 @@ a:hover {
   animation: none;
 }
 
-/* Skill item entrance animation - simplified */
+/* Simplified professional skill items */
 .skill-item.animate-skill {
-  animation: simpleSlideIn 0.3s ease forwards;
+  animation: simpleSlideIn 0.2s ease forwards;
 }
 
-/* Professional hover effects */
+/* Minimal professional hover */
 .skill-item:hover {
   background: var(--primary-color);
   color: white !important;
-  transform: translateY(-2px);
   border-color: var(--primary-color);
-  box-shadow: var(--shadow-md);
   opacity: 1 !important;
   visibility: visible !important;
 }
@@ -540,17 +538,7 @@ a:hover {
   visibility: visible !important;
 }
 
-.skill-item:nth-child(odd) {
-  animation-delay: 0.05s;
-}
-
-.skill-item:nth-child(even) {
-  animation-delay: 0.1s;
-}
-
-.skill-item:nth-child(3n) {
-  animation-delay: 0.15s;
-}
+/* Removed staggered animation delays for professional look */
 
 /* Experience Section */
 .experience-timeline {
@@ -816,49 +804,45 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* Skills Categories */
+/* Professional Skills Categories */
 .skills-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: var(--space-xl);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-lg);
   margin-top: var(--space-lg);
 }
 
 .skill-category {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.95));
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-xl);
+  border-radius: var(--border-radius-lg);
   padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  transition: border-color 0.2s ease;
 }
 
-/* Removed sliding animation for cleaner professional look */
-
 .skill-category:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
   border-color: var(--primary-color);
 }
 
 .category-title {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
   margin-bottom: var(--space-md);
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  position: relative;
-  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-xs);
 }
 
 .category-title i {
   color: var(--primary-color);
-  font-size: 1.25rem;
-  width: 24px;
+  font-size: 1rem;
+  width: 16px;
   text-align: center;
 }
 
@@ -870,17 +854,19 @@ a:hover {
 }
 
 .skill-category .skill-item {
-  font-size: 0.9rem;
-  padding: var(--space-sm) var(--space-xs);
-  background: rgba(51, 65, 85, 0.05);
-  border: 1px solid rgba(51, 65, 85, 0.1);
+  font-size: 0.875rem;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-accent);
+  border: 1px solid transparent;
+  font-weight: 500;
+  text-align: center;
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease;
 }
 
 .skill-category .skill-item:hover {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  border-color: var(--primary-color);
+  background: var(--primary-color);
   color: white;
-  transform: translateY(-3px) scale(1.02);
 }
 
 /* Education */
@@ -928,20 +914,22 @@ a:hover {
 @media (max-width: 768px) {
   .skills-categories {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-md);
   }
   
   .skill-category .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: var(--space-xs);
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: var(--space-sm);
   }
   
   .skill-category {
     padding: var(--space-md);
+    margin-bottom: var(--space-md);
   }
   
   .category-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding-bottom: var(--space-xs);
   }
   
   .hero-content {
@@ -1024,9 +1012,7 @@ a:hover {
     font-size: 0.9rem;
   }
   
-  .skill-item:hover {
-    transform: translateY(-4px) scale(1.03);
-  }
+  /* Removed transforms for mobile professional look */
 
   .profile-links {
     grid-template-columns: 1fr;

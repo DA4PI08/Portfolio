@@ -108,12 +108,12 @@
         const skillsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Simplified skill animation
+                    // Minimal professional animation
                     const skillItems = entry.target.querySelectorAll('.skill-item');
                     skillItems.forEach((item, index) => {
                         setTimeout(() => {
                             item.classList.add('animate-skill');
-                        }, index * 40); // Faster, more professional timing
+                        }, index * 20); // Very fast, professional timing
                     });
                     skillsObserver.unobserve(entry.target);
                 }
