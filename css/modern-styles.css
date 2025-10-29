@@ -92,76 +92,20 @@ html {
   }
 }
 
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3) translateY(50px);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05) translateY(-10px);
-  }
-  70% {
-    transform: scale(0.9) translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes skillGlow {
-  0% {
-    box-shadow: 0 0 5px rgba(51, 65, 85, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(51, 65, 85, 0.6), 0 0 30px rgba(15, 118, 110, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 5px rgba(51, 65, 85, 0.3);
-  }
-}
-
-@keyframes skillProgress {
+@keyframes simpleSlideIn {
   from {
-    width: 0%;
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    width: 100%;
     opacity: 1;
-  }
-}
-
-@keyframes flipIn {
-  from {
-    transform: perspective(400px) rotateY(-90deg);
-    opacity: 0;
-  }
-  40% {
-    transform: perspective(400px) rotateY(-10deg);
-  }
-  70% {
-    transform: perspective(400px) rotateY(10deg);
-  }
-  to {
-    transform: perspective(400px) rotateY(0deg);
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .animate-on-scroll {
   opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
+  animation: simpleSlideIn 0.4s ease forwards;
 }
 
 .animate-delay-1 { animation-delay: 0.1s; }
@@ -309,7 +253,7 @@ a:hover {
 }
 
 .hero-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /* Ensure hero image stays in position */
@@ -345,9 +289,8 @@ a:hover {
 .btn-primary-custom:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
-  transform: translateY(-2px);
   color: white;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary-custom {
@@ -367,8 +310,7 @@ a:hover {
 .btn-secondary-custom:hover {
   background-color: var(--primary-color);
   color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Section Styles */
@@ -434,8 +376,8 @@ a:hover {
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .project-image {
@@ -536,22 +478,7 @@ a:hover {
   overflow: hidden;
 }
 
-.skills-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(51, 65, 85, 0.1), transparent);
-  animation: shimmer 2s infinite;
-  z-index: 0;
-}
-
-@keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
+/* Removed shimmer animation for professional look */
 
 .skills-section > * {
   position: relative;
@@ -589,78 +516,23 @@ a:hover {
   animation: none;
 }
 
-/* Skill item entrance animation */
+/* Skill item entrance animation - simplified */
 .skill-item.animate-skill {
-  animation: bounceIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: simpleSlideIn 0.3s ease forwards;
 }
 
-/* Enhanced hover effects */
+/* Professional hover effects */
 .skill-item:hover {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--primary-color);
   color: white !important;
-  transform: translateY(-8px) scale(1.05);
-  border-color: var(--accent-color);
-  box-shadow: 0 10px 25px rgba(51, 65, 85, 0.3);
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
   opacity: 1 !important;
   visibility: visible !important;
-  z-index: 10;
 }
 
-/* Progress bar effect */
-.skill-item::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 0%;
-  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
-  transition: width 0.6s ease;
-  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
-}
-
-.skill-item.animate-skill::before {
-  animation: skillProgress 0.8s ease forwards;
-  animation-delay: 0.2s;
-}
-
-.skill-item:hover::before {
-  width: 100%;
-  height: 4px;
-  box-shadow: 0 0 10px rgba(15, 118, 110, 0.5);
-}
-
-/* Skill level indicators */
-.skill-item.skill-expert::before {
-  background: linear-gradient(90deg, #10b981, #059669);
-}
-
-.skill-item.skill-advanced::before {
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-}
-
-.skill-item.skill-intermediate::before {
-  background: linear-gradient(90deg, #f59e0b, #d97706);
-}
-
-/* Ripple effect */
-.skill-item::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
-
-.skill-item:hover::after {
-  width: 300px;
-  height: 300px;
-}
+/* Simplified skill item design - removed complex animations */
 
 /* Ensure skill items stay visible */
 .skill-item.animate-skill {
@@ -861,8 +733,7 @@ a:hover {
 .social-link:hover {
   background-color: var(--primary-color);
   color: white;
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Footer */
@@ -885,8 +756,8 @@ a:hover {
 }
 
 .achievement-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .achievement-card h4 {
@@ -945,6 +816,73 @@ a:hover {
   transform: translateY(-2px);
 }
 
+/* Skills Categories */
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+.skill-category {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.95));
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Removed sliding animation for cleaner professional look */
+
+.skill-category:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.category-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.category-title i {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  width: 24px;
+  text-align: center;
+}
+
+.skill-category .skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.skill-category .skill-item {
+  font-size: 0.9rem;
+  padding: var(--space-sm) var(--space-xs);
+  background: rgba(51, 65, 85, 0.05);
+  border: 1px solid rgba(51, 65, 85, 0.1);
+}
+
+.skill-category .skill-item:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px) scale(1.02);
+}
+
 /* Education */
 .education-section {
   margin-top: var(--space-xl);
@@ -988,6 +926,24 @@ a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .skills-categories {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .skill-category .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-xs);
+  }
+  
+  .skill-category {
+    padding: var(--space-md);
+  }
+  
+  .category-title {
+    font-size: 1rem;
+  }
+  
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;

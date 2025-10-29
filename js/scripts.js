@@ -74,13 +74,13 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-on-scroll');
                     
-                    // Add stagger effect for grid items
+                    // Simplified stagger effect
                     if (entry.target.classList.contains('stagger-children')) {
                         const children = entry.target.children;
                         Array.from(children).forEach((child, index) => {
                             setTimeout(() => {
                                 child.classList.add('animate-on-scroll');
-                            }, index * 150);
+                            }, index * 50); // Reduced delay for professional look
                         });
                     }
                 }
@@ -91,38 +91,39 @@
         const animateElements = document.querySelectorAll('.section-header, .project-card, .experience-item, .achievement-card, .skill-item, .contact-item');
         animateElements.forEach(el => observer.observe(el));
 
-        // Special handling for skills grid
-        const skillsGrid = document.querySelector('.skills-grid');
-        if (skillsGrid) {
-            skillsGrid.classList.add('stagger-children');
-            observer.observe(skillsGrid);
-        }
+        // Special handling for skills categories
+        const skillsCategories = document.querySelectorAll('.skill-category');
+        skillsCategories.forEach(category => {
+            category.classList.add('stagger-children');
+            observer.observe(category);
+        });
     }
 
     // Enhanced animated skills with staggered entrance and interactive effects
     function initSkillsAnimation() {
-        const skillsGrid = document.getElementById('skillsGrid');
+        const skillCategories = document.querySelectorAll('.skill-category');
         const skillItems = document.querySelectorAll('.skill-item');
         
-        // Intersection Observer for skills grid
+        // Intersection Observer for skills categories
         const skillsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Trigger staggered animation for each skill item
+                    // Simplified skill animation
                     const skillItems = entry.target.querySelectorAll('.skill-item');
                     skillItems.forEach((item, index) => {
                         setTimeout(() => {
                             item.classList.add('animate-skill');
-                        }, index * 80); // Reduced to 80ms delay between each item
+                        }, index * 40); // Faster, more professional timing
                     });
                     skillsObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.3 });
         
-        if (skillsGrid) {
-            skillsObserver.observe(skillsGrid);
-        }
+        // Observe each skill category
+        skillCategories.forEach(category => {
+            skillsObserver.observe(category);
+        });
         
         // Enhanced hover effects
         skillItems.forEach((item, index) => {
@@ -202,31 +203,9 @@
         });
     }
 
-    // Typing effect for hero title
+    // Removed typing effect for professional presentation
     function initTypingEffect() {
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle) {
-            const text = heroTitle.textContent;
-            heroTitle.textContent = '';
-            heroTitle.style.borderRight = '2px solid #334155';
-            
-            let i = 0;
-            const typeWriter = () => {
-                if (i < text.length) {
-                    heroTitle.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                } else {
-                    // Remove cursor after typing is complete
-                    setTimeout(() => {
-                        heroTitle.style.borderRight = 'none';
-                    }, 1000);
-                }
-            };
-            
-            // Start typing effect after a delay
-            setTimeout(typeWriter, 1500);
-        }
+        // Typing effect disabled for cleaner professional look
     }
 
     // Parallax effect for hero section - Disabled to fix positioning
@@ -251,7 +230,7 @@
         }
     });
 
-    // Counter animation for achievements
+    // Simplified counter animation
     function animateCounters() {
         $('.counter').each(function() {
             const $this = $(this);
@@ -260,8 +239,8 @@
             $({ countNum: $this.text() }).animate({
                 countNum: countTo
             }, {
-                duration: 2000,
-                easing: 'swing',
+                duration: 1000, // Faster animation
+                easing: 'ease',
                 step: function() {
                     $this.text(Math.floor(this.countNum));
                 },
@@ -272,25 +251,7 @@
         });
     }
 
-    // Smooth reveal for contact items
-    $('.contact-item').hover(
-        function() {
-            $(this).find('.contact-icon').addClass('animated pulse');
-        },
-        function() {
-            $(this).find('.contact-icon').removeClass('animated pulse');
-        }
-    );
-
-    // Project card hover effects
-    $('.project-card').hover(
-        function() {
-            $(this).find('.project-image').css('transform', 'scale(1.05)');
-        },
-        function() {
-            $(this).find('.project-image').css('transform', 'scale(1)');
-        }
-    );
+    // Simplified professional hover effects - handled via CSS only
 
     // Back to top button with smooth scroll
     $(window).scroll(function() {
