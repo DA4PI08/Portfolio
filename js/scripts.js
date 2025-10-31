@@ -230,22 +230,32 @@
         }
     });
 
-    // Simplified counter animation
+    // Enhanced counter animation with formatting
     function animateCounters() {
-        $('.counter').each(function() {
+        $('.counter, .stat-number').each(function() {
             const $this = $(this);
-            const countTo = $this.attr('data-count');
+            const countTo = parseInt($this.attr('data-count'));
             
-            $({ countNum: $this.text() }).animate({
+            $({ countNum: 0 }).animate({
                 countNum: countTo
             }, {
-                duration: 1000, // Faster animation
-                easing: 'ease',
+                duration: 2000,
+                easing: 'swing',
                 step: function() {
-                    $this.text(Math.floor(this.countNum));
+                    const num = Math.floor(this.countNum);
+                    // Format large numbers with commas and + suffix
+                    if (num >= 1000) {
+                        $this.text(num.toLocaleString() + '+');
+                    } else {
+                        $this.text(num + '+');
+                    }
                 },
                 complete: function() {
-                    $this.text(this.countNum);
+                    if (countTo >= 1000) {
+                        $this.text(countTo.toLocaleString() + '+');
+                    } else {
+                        $this.text(countTo + '+');
+                    }
                 }
             });
         });
@@ -269,24 +279,28 @@
         return false;
     });
 
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    if (backToTopButton) {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 600, 'easeInOutCubic');
+        });
+    }
+    
     // Loading animation
     $(window).on('load', function() {
         $('.hero-section').addClass('animate-on-scroll');
-        
-        // Trigger counter animations when they come into view
-        const counterObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        const achievementsSection = document.querySelector('#achievements');
-        if (achievementsSection) {
-            counterObserver.observe(achievementsSection);
-        }
     });
 
 })(jQuery);

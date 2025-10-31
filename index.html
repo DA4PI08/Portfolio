@@ -703,12 +703,74 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Divyansh Agrawal. All rights reserved. | Crafted with passion for innovation</p>
+    <!-- Enhanced Footer -->
+    <footer class="modern-footer">
+        <div class="container-custom">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Divyansh Agrawal</h4>
+                    <p class="footer-description">Senior Software Engineer specializing in enterprise-grade Java solutions and microservices architecture.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/divyanshagrawal4pi08/" target="_blank" class="footer-social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/DA4PI08" target="_blank" class="footer-social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/divyansh4pi08" target="_blank" class="footer-social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#experience" class="footer-link">Experience</a></li>
+                        <li><a href="#projects" class="footer-link">Projects</a></li>
+                        <li><a href="#achievements" class="footer-link">Achievements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Technologies</h4>
+                    <ul class="footer-links">
+                        <li><span class="footer-text">Java & Spring Boot</span></li>
+                        <li><span class="footer-text">Microservices & REST APIs</span></li>
+                        <li><span class="footer-text">MongoDB & SQL</span></li>
+                        <li><span class="footer-text">Docker & Kafka</span></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:divyanshagrawal532@gmail.com" class="footer-link">
+                                <i class="fas fa-envelope"></i> Email Me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1CI6S5C2ZeNjzpahEzskT1DCVz5qYLmhV/view?usp=sharing" target="_blank" class="footer-link">
+                                <i class="fas fa-download"></i> Resume
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Divyansh Agrawal. All rights reserved.</p>
+                <p class="footer-credits">Built with <i class="fas fa-heart"></i> using Bootstrap, Font Awesome & Modern CSS</p>
+            </div>
         </div>
     </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -716,6 +778,156 @@
     <script src="js/scripts.js"></script>
     
     <style>
+    /* Enhanced Footer */
+    .modern-footer {
+        background: var(--text-primary);
+        color: rgba(255, 255, 255, 0.8);
+        padding: var(--space-2xl) 0 var(--space-lg);
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: var(--space-xl);
+        margin-bottom: var(--space-xl);
+    }
+    
+    .footer-section {
+        min-width: 0;
+    }
+    
+    .footer-title {
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: var(--space-md);
+    }
+    
+    .footer-description {
+        line-height: 1.6;
+        margin-bottom: var(--space-md);
+        font-size: 0.9rem;
+    }
+    
+    .footer-social {
+        display: flex;
+        gap: var(--space-sm);
+    }
+    
+    .footer-social-link {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .footer-social-link:hover {
+        background: var(--primary-color);
+        transform: translateY(-3px);
+    }
+    
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-links li {
+        margin-bottom: var(--space-xs);
+    }
+    
+    .footer-link {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: all 0.2s ease;
+        font-size: 0.9rem;
+    }
+    
+    .footer-link:hover {
+        color: white;
+        padding-left: 5px;
+    }
+    
+    .footer-text {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: var(--space-lg);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-bottom p {
+        margin: var(--space-xs) 0;
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .footer-credits {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .footer-credits i {
+        color: #e74c3c;
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.25rem;
+        cursor: pointer;
+        box-shadow: var(--shadow-lg);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .back-to-top:hover {
+        background: var(--secondary-color);
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-xl);
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .back-to-top {
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+        }
+    }
+    
     .achievement-card {
         background: var(--bg-primary);
         padding: var(--space-lg);
