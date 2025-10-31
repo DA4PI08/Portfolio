@@ -16,6 +16,12 @@
     
     <title>Divyansh Agrawal - Senior Java Developer</title>
     
+    <!-- Preconnect to external resources for faster loading -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicons/favicon-32x32.png">
@@ -213,7 +219,7 @@
                                 <div class="skills-grid">
                                     <div class="skill-item skill-expert" data-skill="Agentic AI">Agentic AI</div>
                                     <div class="skill-item skill-expert" data-skill="MCP">MCP (Model Context Protocol)</div>
-                                    <div class="skill-item skill-intermediate" data-skill="AI Integration">AI Integration</div>
+                                    <div class="skill-item skill-intermediate" data-skill="GenAI">AI Integration</div>
                                 </div>
                             </div>
                         </div>
@@ -772,406 +778,49 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Professional Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Divyansh Agrawal</p>
+        </div>
+    </div>
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Divyansh Agrawal",
+        "jobTitle": "Senior Software Development Engineer",
+        "description": "Senior Software Engineer with 5+ years of proven expertise in designing and implementing enterprise-grade solutions. Specialized in Java ecosystem, microservices architecture, and system optimization.",
+        "url": "https://da4pi08.github.io/Portfolio/",
+        "image": "https://da4pi08.github.io/Portfolio/assets/img/circle2.jpeg",
+        "email": "divyanshagrawal532@gmail.com",
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Acropolis Institute of Technology and Research",
+            "location": "Indore, Madhya Pradesh"
+        },
+        "knowsAbout": ["Java", "Spring Boot", "Microservices", "System Design", "MongoDB", "Apache Kafka", "Docker", "REST APIs", "Event-Driven Architecture"],
+        "sameAs": [
+            "https://www.linkedin.com/in/divyanshagrawal4pi08/",
+            "https://github.com/DA4PI08",
+            "https://twitter.com/divyansh4pi08"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Avalara"
+        }
+    }
+    </script>
+
+    <!-- Scripts - Deferred for performance -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js" defer></script>
     
-    <style>
-    /* Enhanced Footer */
-    .modern-footer {
-        background: var(--text-primary);
-        color: rgba(255, 255, 255, 0.8);
-        padding: var(--space-2xl) 0 var(--space-lg);
-    }
-    
-    .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: var(--space-xl);
-        margin-bottom: var(--space-xl);
-    }
-    
-    .footer-section {
-        min-width: 0;
-    }
-    
-    .footer-title {
-        color: white;
-        font-size: 1.125rem;
-        font-weight: 600;
-        margin-bottom: var(--space-md);
-    }
-    
-    .footer-description {
-        line-height: 1.6;
-        margin-bottom: var(--space-md);
-        font-size: 0.9rem;
-    }
-    
-    .footer-social {
-        display: flex;
-        gap: var(--space-sm);
-    }
-    
-    .footer-social-link {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        color: white;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-    
-    .footer-social-link:hover {
-        background: var(--primary-color);
-        transform: translateY(-3px);
-    }
-    
-    .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .footer-links li {
-        margin-bottom: var(--space-xs);
-    }
-    
-    .footer-link {
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
-        transition: all 0.2s ease;
-        font-size: 0.9rem;
-    }
-    
-    .footer-link:hover {
-        color: white;
-        padding-left: 5px;
-    }
-    
-    .footer-text {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
-    }
-    
-    .footer-bottom {
-        text-align: center;
-        padding-top: var(--space-lg);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .footer-bottom p {
-        margin: var(--space-xs) 0;
-        font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.7);
-    }
-    
-    .footer-credits {
-        color: rgba(255, 255, 255, 0.5);
-    }
-    
-    .footer-credits i {
-        color: #e74c3c;
-    }
-    
-    /* Back to Top Button */
-    .back-to-top {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        font-size: 1.25rem;
-        cursor: pointer;
-        box-shadow: var(--shadow-lg);
-        transition: all 0.3s ease;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .back-to-top.show {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .back-to-top:hover {
-        background: var(--secondary-color);
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-xl);
-    }
-    
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .footer-content {
-            grid-template-columns: 1fr;
-            gap: var(--space-lg);
-        }
-        
-        .back-to-top {
-            bottom: 20px;
-            right: 20px;
-            width: 45px;
-            height: 45px;
-        }
-    }
-    
-    .achievement-card {
-        background: var(--bg-primary);
-        padding: var(--space-lg);
-        border-radius: var(--border-radius-lg);
-        box-shadow: var(--shadow-md);
-        border: 1px solid var(--border-color);
-        height: 100%;
-        transition: all 0.3s ease;
-    }
-    
-    .achievement-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-    }
-    
-    .achievement-card h4 {
-        color: var(--text-primary);
-        margin-bottom: var(--space-md);
-        font-size: 1.125rem;
-    }
-    
-    .achievement-card p {
-        color: var(--text-secondary);
-        margin-bottom: 0;
-        line-height: 1.6;
-    }
-    
-    /* Modern Certifications Styling */
-    .certifications-section {
-        margin-top: var(--space-2xl);
-        padding: var(--space-xl) 0;
-        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-accent) 100%);
-        border-radius: var(--border-radius-xl);
-    }
-    
-    .certifications-title {
-        font-size: 1.75rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin-bottom: var(--space-sm);
-    }
-    
-    .certifications-subtitle {
-        color: var(--text-secondary);
-        font-size: 1rem;
-        margin-bottom: var(--space-xl);
-    }
-    
-    .certifications-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--space-lg);
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 var(--space-lg);
-    }
-    
-    .certification-card {
-        background: var(--bg-primary);
-        border-radius: var(--border-radius-lg);
-        padding: var(--space-lg);
-        box-shadow: var(--shadow-sm);
-        border: 1px solid var(--border-color);
-        transition: all 0.3s ease;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .certification-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    
-    .certification-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary-color);
-    }
-    
-    .certification-card:hover::before {
-        opacity: 1;
-    }
-    
-    .cert-icon-wrapper {
-        width: 60px;
-        height: 60px;
-        margin: 0 auto var(--space-md);
-        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .cert-icon-wrapper::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-        transform: rotate(45deg);
-        transition: all 0.6s ease;
-        opacity: 0;
-    }
-    
-    .certification-card:hover .cert-icon-wrapper::before {
-        animation: shimmer 1.5s ease-in-out;
-    }
-    
-    @keyframes shimmer {
-        0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
-        50% { opacity: 1; }
-        100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
-    }
-    
-    .cert-icon {
-        font-size: 1.5rem;
-        color: white;
-        z-index: 2;
-        position: relative;
-    }
-    
-    .cert-content {
-        text-align: center;
-    }
-    
-    .cert-name {
-        font-size: 1.125rem;
-        font-weight: 600;
-        color: var(--text-primary);
-        margin-bottom: var(--space-xs);
-        line-height: 1.3;
-    }
-    
-    .cert-provider {
-        color: var(--text-secondary);
-        font-size: 0.875rem;
-        margin-bottom: var(--space-md);
-        font-weight: 500;
-    }
-    
-    .cert-link {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-xs);
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.875rem;
-        padding: var(--space-xs) var(--space-sm);
-        border: 1px solid var(--primary-color);
-        border-radius: var(--border-radius-sm);
-        transition: all 0.2s ease;
-    }
-    
-    .cert-link:hover {
-        background-color: var(--primary-color);
-        color: white;
-        transform: translateY(-1px);
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .certifications-grid {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-md);
-            padding: 0 var(--space-md);
-        }
-        
-        .certification-card {
-            padding: var(--space-md);
-        }
-        
-        .cert-icon-wrapper {
-            width: 50px;
-            height: 50px;
-        }
-        
-        .cert-icon {
-            font-size: 1.25rem;
-        }
-        
-        .certifications-title {
-            font-size: 1.5rem;
-        }
-    }
-    
-    .profile-links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-md);
-    }
-    
-    .profile-link {
-        display: flex;
-        align-items: center;
-        gap: var(--space-sm);
-        padding: var(--space-md);
-        background-color: var(--bg-accent);
-        border-radius: var(--border-radius-lg);
-        color: var(--text-primary);
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-    
-    .profile-link:hover {
-        background-color: var(--primary-color);
-        color: white;
-        transform: translateY(-2px);
-    }
-    
-    .education-item {
-        margin-top: var(--space-lg);
-    }
-    
-    .education-item h4 {
-        color: var(--text-primary);
-        font-size: 1.125rem;
-        margin-bottom: var(--space-xs);
-    }
-    
-    .education-item p {
-        margin-bottom: var(--space-xs);
-    }
-    
-    @media (max-width: 768px) {
-        .profile-links {
-            grid-template-columns: 1fr;
-        }
-    }
-    </style>
+    <!-- All styles moved to external CSS for better performance and caching -->
 </body>
 
 </html>

@@ -298,9 +298,14 @@
         });
     }
     
-    // Loading animation
+    // Professional Loading Screen - Optimized
     $(window).on('load', function() {
         $('.hero-section').addClass('animate-on-scroll');
+        
+        // Hide loading screen quickly for better performance
+        setTimeout(function() {
+            $('#loading-screen').addClass('hidden');
+        }, 200);
     });
 
 })(jQuery);
