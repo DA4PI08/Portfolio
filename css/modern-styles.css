@@ -248,11 +248,12 @@ a:hover {
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: var(--space-xl);
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
   position: relative;
@@ -260,7 +261,13 @@ a:hover {
 }
 
 .hero-text {
-  padding-right: var(--space-lg);
+  padding-right: 0;
+  order: 2;
+  width: 100%;
+}
+
+.hero-image-container {
+  order: 1;
 }
 
 .hero-greeting {
@@ -309,6 +316,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: var(--space-lg);
+  justify-content: center;
 }
 
 .hero-badge {
@@ -335,6 +343,7 @@ a:hover {
   padding: var(--space-md) 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  justify-content: center;
 }
 
 .hero-stat {
@@ -403,6 +412,7 @@ a:hover {
   display: flex;
   gap: var(--space-md);
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn-primary-custom {
@@ -1088,9 +1098,7 @@ a:hover {
   }
   
   .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
   
   .hero-name {
@@ -1104,15 +1112,6 @@ a:hover {
 
   .hero-text {
     padding-right: 0;
-  }
-
-  .hero-badges {
-    justify-content: center;
-  }
-
-  .hero-stats {
-    justify-content: center;
-    gap: var(--space-md);
   }
 
   .hero-stat-value {
